@@ -17,7 +17,7 @@ const App = () => {
 
   const store = e => {
     e.preventDefault();
-    let newValue = input.replace(/\s/g, '').split(',');
+    let newValue = input.replace(/\s/g, '').split(/[ \s,-]+/);
     if (newValue) {
       newValue = [...new Set(newValue)];
       let addValue = [];
